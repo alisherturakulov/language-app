@@ -1,3 +1,9 @@
 body {
     background-color:linen;
 }
+
+#content-block {
+    display:inline-block;
+    width: 80%;
+}
+
