@@ -2,24 +2,43 @@ body {
     background-color:rgb(237, 235, 215);
 }
 
-#navbar{
+.navbar ul{
     background-color:rgb(227, 221, 197);
     width: auto;
     height:5%;
     align-items: start;
-    display:flex;
+    display: inline-flex;
+    padding:1%;
 }
 
-#navbar li{
-    display: inline-block;
+.navbar li{
+   padding-left:5rem;
 }
 
-#navbar li a{
+.navbar li a{
     text-align:center;
     font-family: 'Courier New', Courier, monospace;
     color:black;
-    margin:left 15em;
+    margin-left: 5px;
     text-decoration-line:none;
     font-weight: bold;
+}
+
+.index-body{
+    
+}
+
+h1, h2{
+    font-family:'Courier New', Courier, monospace;
+    
+}
+
+.login-div{
+    display:flex;
+}
+
+input, button{
+    flex-direction: column;
+    flex-basis: 100%;
 }
 
