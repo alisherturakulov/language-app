@@ -1,9 +1,25 @@
 body {
-    background-color:linen;
+    background-color:rgb(237, 235, 215);
 }
 
-#content-block {
-    display:inline-block;
-    width: 80%;
+#navbar{
+    background-color:rgb(227, 221, 197);
+    width: auto;
+    height:5%;
+    align-items: start;
+    display:flex;
+}
+
+#navbar li{
+    display: inline-block;
+}
+
+#navbar li a{
+    text-align:center;
+    font-family: 'Courier New', Courier, monospace;
+    color:black;
+    margin:left 15em;
+    text-decoration-line:none;
+    font-weight: bold;
 }
 
