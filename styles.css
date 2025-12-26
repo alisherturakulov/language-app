@@ -2,30 +2,26 @@ body {
     background-color:rgb(237, 235, 215);
 }
 
-.navbar ul{
-    background-color:rgb(227, 221, 197);
-    width: auto;
-    height:5%;
-    align-items: start;
-    display: flex;
-    padding:1%;
+
+
+#navbar nav{
+    display:flex;
+    background-color:rgb(77, 142, 203);
+   
 }
 
-.navbar li{
-   padding-left:5rem;
-}
-
-.navbar li a{
-    text-align:center;
+#navbar nav a{
+    text-align: center;
     font-family: 'Courier New', Courier, monospace;
     color:black;
-    margin-left: 5px;
+    margin: .5rem;
     text-decoration-line:none;
     font-weight: bold;
+    flex: auto;
 }
 
 .index-body{
-    
+    margin: 1rem;
 }
 
 h1, h2{

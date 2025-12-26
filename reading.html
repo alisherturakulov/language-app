@@ -2,36 +2,48 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <script src="reading.js" defer></script>
     </head>
     <body>
-        <div class="nav-div">
-            <nav id="navbar">
-                <ul>
-                    <li><a href="./reading.html">Reading</a></li>
-                    <li><a href="./grammar.html" >Grammar</a></li>
-                    <li><a href="./conversation.html">Conversation</a></li>
-                </ul>
+        <div id="navbar">
+            <nav >
+                              
+                    <a href="./reading.html">Reading</a>
+                    <a href="./grammar.html" >Grammar</a>
+                    <a href="./conversation.html">Conversation</a>
+                
             </nav>
         </div>
         <div class = "card-container">
             <div class="letter-card">
-                <h2>%Number%</h2>
+                <h5>
+                    Number
+                </h5>
+                <h1 id="kanji-character">
+                   A
+                </h1>
+                <h4>
+                    Meaning:
+                </h4>
+                <p id="meaning">
+                    some
+                </p> 
+                <h4>Readings</h4>
                 <p>
-                    %Letter%
-                </p>
-                 <h3>
-                      %meaning%  
-                </h3>
-                <h3>Readings</h3>
-                <p>
-                    on: %on%
-                    kun: %kun%
+                    on-yomi: <p id="on-reading"></p>
+                    kun-yomi: <p id="kun-reading"></p>
                 </p>
                    
             </div>
+            <button id="prev"type="button">
+                Previous
+            </button>
+            <button id="next" type="button">
+                Next
+            </button>
         </div>
+        
     </body>
 </html>
