@@ -1,13 +1,13 @@
 const fs = require('fs');
 const readline = require('readline');
 
-const kanji = [];//to hold kanji chars in order
-const meanings = []; //holds the meanings; indices correspond to the kanji 
-const readings = []; //stored "on;kun"
+const kanjiList = [];//to hold kanji chars in order
+const meaningsList = []; //holds the meanings; indices correspond to the kanji 
+const readingsList = []; //stored "on;kun"
 
 
 
-async function readCSV(fname, kanji, meanings, readings,){
+ function readCSV(fname, kanji, meanings, readings){
     const fileStream = fs.createReadStream(fname);
 
     const rl = readline.createInterface({
@@ -15,31 +15,36 @@ async function readCSV(fname, kanji, meanings, readings,){
         crlfDelay: Infinity
     });
 
-    let tableLine = ;//csv file line
+    let tableLine = [];//csv file line
     
   /*  for await (const line of rl){
         tableLine = line.split(',');
        
     }*/
 
-    rl.once('line');//skip the header
-
+    
     rl.on('line', (line) => {
         tableLine = line.split(',');
-        kanji.push(tableLine[1]);
-        meanings.push(tableLine[7]);
-        readings.push(tableLine[8]+";"tableLine[9]);
+        if(!isNaN(tableLine[0])){
+            kanji.push(tableLine[1]);
+            meanings.push(tableLine[7]);
+            readings.push(tableLine[8]+";"+tableLine[9]);
+        }/*else{
+            console.log("header: " + tableLine[0]);//should be index
+        }*/
     });
+    
 
     rl.on('close', () => {
-        console.log(results); 
+        //console.log(kanji); //works
     });
 
 }
 
-function readIntoTable(fileName){
+readCSV("kanji.csv", kanjiList, meaningsList, readingsList);
+//console.log(kanji);
 
-}
+//function readIntoTable(fileName){}
 
 /**
  * changes the letter card displayed
