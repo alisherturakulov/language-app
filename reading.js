@@ -1,10 +1,28 @@
+
 const fs = require('fs');
 const readline = require('readline');
+
+import {file}
 
 const kanjiList = [];//to hold kanji chars in order
 const meaningsList = []; //holds the meanings; indices correspond to the kanji 
 const readingsList = []; //stored "on;kun"
 
+readCSV("kanji.csv", kanjiList, meaningsList, readingsList);
+//console.log(kanji);
+
+let currentLetterIndex = 0;
+changeLetterCard(currentLetterIndex, kanjiList, meaningsList, readingsList);
+
+document.getElementById("prev").addEventListener("click", () => {
+    currentLetterIndex = Math.max(0, currentLetterIndex - 1);
+    changeLetterCard(currentLetterIndex, kanjiList, meaningsList, readingsList);
+});
+
+document.getElementById("next").addEventListener("click", () => {
+    currentLetterIndex = Math.min(kanjiList.length, currentLetterIndex+1);
+    changeLetterCard(currentLetterIndex, kanji, meaningsList, readingsList);
+});
 
 
  function readCSV(fname, kanji, meanings, readings){
@@ -41,25 +59,27 @@ const readingsList = []; //stored "on;kun"
 
 }
 
-readCSV("kanji.csv", kanjiList, meaningsList, readingsList);
-//console.log(kanji);
+
 
 //function readIntoTable(fileName){}
 
 /**
  * changes the letter card displayed
- * @param {integer} letter index of kanjiList
- * @see changeReadings helper function
+ * @param {integer} letterIndex index of kanjiList
+ * @throws Error when letter isNaN
  */
-function changeLetterDisplayed(letter){
-
+function changeLetterCard(letterIndex, kanji, meanings, readings){
+    if(isNaN(letterIndex) || letterIndex < 0 || letterIndex >= kanji.length){
+       // throw new Error("invalid letter index");
+    }
+    const letter = document.getElementById("kanjiCharacter");
+    const meaning = document.getElementById("meaning");
+    const onReading = document.getElementById("onReading");
+    const kunReading= document.getElementById("kunReading");
+    
+    letter.innerText = kanji[letterIndex];
+    meaning.innerText = meanings[letterIndex];
+    onReading.innerText = readings[letterIndex].substring(0, readings[letterIndex].indexOf(','));
+    kunReading.innerText = readings[letterIndex].substring(readings[letterIndex]+1);
 }
 
-/** changes the readings on the card
- * @see changeLetterDisplayed used by
- * changes the readings displayed on a card
- * @param {integer} letter the index corresponding to the letter
- */
-function changeReadings(letter ){
-
-}
