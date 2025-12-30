@@ -1,18 +1,18 @@
-# Language learning app
+# langauge learning app
+
   ## Features
    - Reading: learning to read letters
-   - Grammar: putting together words
-   - Conversation: sentences, speaking in the language
+   - Conversation practice with a computer
 
 
-## Timeline  
+## Timeline:  
 #### Phase 1:
-  -  Base HTML and CSS of the homepage, reading, grammar, and conversion pages
+  -  Base HTML and styles of homepage and conversion pages.
   -  Integrate backend register/login feature
 #### Phase 2:
 -  Add other pages:
   -  Reading page: generates cards from a list of kanji 
-  -  Grammar page: practice sentences 
-  -  Conversation: a list of prompts with answer checking
+    - Save sets of cards
+  -  Grammar and writing page: practice writing sentences with a AI agent
 
     
