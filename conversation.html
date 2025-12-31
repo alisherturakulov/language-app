@@ -2,21 +2,26 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width:device-width;initial-scale=0">
+        <meta name="viewport" content="width:device-width;initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div class="sentenceStructure">
-            <h5>Basic Structure of Sentences in Japanese </h5>
-            <img src="" width="400" height="300">
+            <!--
+             <h5>Basic Structure of Sentences in Japanese </h5>
+             <img src="https://8020japanese.com/wp-content/uploads/2017/11/Japanese-Sentence-Structure-Cheat-Sheet-kana-small.png"  height="400"> 
+            -->
             <h5>Additional Reading</h5>
             <a href="https://en.wikipedia.org/wiki/Japanese_grammar">Wikipedia article explaining japanese grammar</a>
         </div>
-        <div id="chat">
+        <div id="chatDiv">
             <div id="messageBox">
-                
+                <div class="message">
+                    Enter a sentence or a question to receive a response and feedback!
+                </div>
             </div>
             <div id="chatInput">
-                <form method="post">
+                <form method="post" action="/">
                     <input type="text">
                     <button type="submit" >Submit</button>
                 </form>

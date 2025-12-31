@@ -1,20 +1,20 @@
+/*for conversation, reading, and index pages*/
+
 body {
     background-color:rgb(237, 235, 215);
 }
 
-
-
-#navbar nav{
+#navbar {
     display:flex;
     background-color:rgb(77, 142, 203);
-   
+    padding: 1rem;
 }
 
 #navbar nav a{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     color:black;
-    margin: .5rem;
+    //margin: .5rem;
     text-decoration-line:none;
     font-weight: bold;
     flex: auto;
@@ -38,3 +38,31 @@ input, button{
     flex-basis: 100%;
 }
 
+/*Conversation*/
+#chatDiv{
+    margin: .5rem;
+    margin-left: 25%;
+    padding:.5rem;
+    border: 2px solid rgb(30, 72, 100);
+    width: 50%;
+    
+   
+}
+
+#messageBox{
+    padding:.5rem;
+    border: 1px solid rgb(30, 72, 100);
+    margin:.5rem;
+    height:50%;
+    display:block;
+   
+}
+
+#chatInput{
+    margin-left: 35%;
+}
+
+.message{
+    border: 1px solid rgb(30, 72, 100);
+    width: 30%;
+}
