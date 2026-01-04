@@ -14,7 +14,7 @@ body {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     color:black;
-    //margin: .5rem;
+    margin: .5rem;
     text-decoration-line:none;
     font-weight: bold;
     flex: auto;
