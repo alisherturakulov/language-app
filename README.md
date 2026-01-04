@@ -1,4 +1,5 @@
 # langauge learning app
+  For Learning 2136 Joyo Kanji, the kanji considered required for fluency
 
   ## Features
    - Reading: learning to read letters

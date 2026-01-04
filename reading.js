@@ -171,7 +171,7 @@ function changeLetterCard(letterIndex, kanji, meanings, readings){
     const onReading = document.getElementById("onReading");
     const kunReading= document.getElementById("kunReading");
     
-    num.innerText = letterIndex;
+    num.innerText = letterIndex+1;//cards are 1 indexed 
     letter.innerText = kanji[letterIndex];
     meaning.innerText = meanings[letterIndex];
     
