@@ -14,17 +14,33 @@ readCSV(kanjiList, meaningsList, readingsList).then(() => {
     console.log(kanjiList);
 
     document.getElementById('prev').addEventListener('click', (event) => {
-        
-        currentLetterIndex = Math.max(0, currentLetterIndex-1);
+        if(currentLetterIndex === 0){
+            currentLetterIndex = kanjiList.length-2;
+        }else{
+            currentLetterIndex--;
+        }
+        //currentLetterIndex = Math.max(0, currentLetterIndex-1);
         changeLetterCard(currentLetterIndex, kanjiList, meaningsList, readingsList);
     });
 
     document.getElementById("next").addEventListener("click", (event) => {
-        currentLetterIndex = Math.min(kanjiList.length-1, currentLetterIndex+1);
+        if(currentLetterIndex === kanjiList.length-2){
+            currentLetterIndex = 0;
+        }else{
+            currentLetterIndex++;
+        }
+        //currentLetterIndex = Math.min(kanjiList.length-1, currentLetterIndex+1);
         changeLetterCard(currentLetterIndex, kanjiList, meaningsList, readingsList);
     });
 });
 
+
+/**
+ * processes a kanji.csv file and initializes values for the lists
+ * @param {string[]} kanji 
+ * @param {string[]} meanings 
+ * @param {string[]} readings 
+ */
 async function readCSV(kanji, meanings, readings){
     
     fetch("https://raw.githubusercontent.com/alisherturakulov/language-app/refs/heads/main/kanji.csv")//csv from wikipedia
