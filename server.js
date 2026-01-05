@@ -8,14 +8,19 @@ const server = http.createServer((req, res) => {
     const url = req.url;
     console.log('received request:' + req.url);
     
-    if(url === "/" || url === "/home"){
+    //routing for urls
+    if(url === "/" || url === "/index.html"){
         res.writeHead(200, {'Content-Type':'text/html'});
         fs.createReadStream(path.join(__dirname, 'index.html')).pipe(res);
-        
-    }/*else if(url==='/conversation'){
+        //res.end();
+    }else if(url==='/reading' || url === '/reading.html'){
         res.writeHead(200, {'Content-Type': 'text/html'});
-        fs.readFile(path.join(__dirname, 'reading.html'), 'utf-8').pipe(res);
-    }*/
+        fs.createReadStream(path.join(__dirname, 'reading.html')).pipe(res);
+        res.end();
+    }else if(url ==='/conversation' || url === 'conversation.html'){
+        res.writeHead(200, {'Content-Type':'text/html'});
+        fs.createReadStream(path.join(__dirname, 'conversation.html')).pipe(res);
+    }
 
 });
 
